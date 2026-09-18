@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBJP9NE5L0445099",
+      "type": "winter",
+      "profileDepthMm": {
+        "frontLeft": 5.0,
+        "frontRight": 6.3,
+        "rearLeft": 5.7,
+        "rearRight": 5.0
+      },
+      "location": {
+        "name": "Autobedrijf P Bot BV",
+        "street": "Hoogstad 51",
+        "houseNumber": "",
+        "postalCode": "3131 KX",
+        "city": "Vlaardingen",
+        "country": "NL",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "UnAuthorized"
+      }
+    }
+  }
+]

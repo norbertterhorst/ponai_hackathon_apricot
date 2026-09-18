@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBJP6NJ6JZ683207",
+      "type": "summer",
+      "profileDepthMm": {
+        "frontLeft": 4.1,
+        "frontRight": 4.4,
+        "rearLeft": 6.5,
+        "rearRight": 6.1
+      },
+      "location": {
+        "name": "Wittebrug Auto Honsel",
+        "street": "Nieuweweg",
+        "houseNumber": "",
+        "postalCode": "2675 BC",
+        "city": "HONSELERSDIJK",
+        "country": "",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "Authorized"
+      }
+    }
+  }
+]

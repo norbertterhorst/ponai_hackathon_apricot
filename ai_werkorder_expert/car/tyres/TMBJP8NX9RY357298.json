@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBJP8NX9RY357298",
+      "type": "winter",
+      "profileDepthMm": {
+        "frontLeft": 6.3,
+        "frontRight": 4.0,
+        "rearLeft": 6.1,
+        "rearRight": 6.3
+      },
+      "location": {
+        "name": "Vallei Auto Groep B.V.",
+        "street": "Galileistraat 27 - 29",
+        "houseNumber": "",
+        "postalCode": "3902 HR",
+        "city": "VEENENDAAL",
+        "country": "Nederland",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "Authorized"
+      }
+    }
+  }
+]

@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBJB9NS0P8888202",
+      "type": "winter",
+      "profileDepthMm": {
+        "frontLeft": 6.1,
+        "frontRight": 6.3,
+        "rearLeft": 4.2,
+        "rearRight": 5.3
+      },
+      "location": {
+        "name": "Autoservice rakthof bv",
+        "street": "Rakthof, 15",
+        "houseNumber": "",
+        "postalCode": "5709EK",
+        "city": "Helmond",
+        "country": "",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "UnAuthorized"
+      }
+    }
+  }
+]

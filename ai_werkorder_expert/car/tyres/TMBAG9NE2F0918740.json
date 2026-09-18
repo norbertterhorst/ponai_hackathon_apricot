@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBAG9NE2F0918740",
+      "type": "allseason",
+      "profileDepthMm": {
+        "frontLeft": 5.9,
+        "frontRight": 6.9,
+        "rearLeft": 4.6,
+        "rearRight": 4.2
+      },
+      "location": {
+        "name": "Autobedrijf Van den Udenhout",
+        "street": "Balkweg 1",
+        "houseNumber": "",
+        "postalCode": "5232 BT",
+        "city": "DEN BOSCH",
+        "country": "NLD",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "Authorized"
+      }
+    }
+  }
+]

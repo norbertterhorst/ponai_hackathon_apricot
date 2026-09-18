@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBEK7NW2L3205548",
+      "type": "summer",
+      "profileDepthMm": {
+        "frontLeft": 7.0,
+        "frontRight": 4.5,
+        "rearLeft": 4.2,
+        "rearRight": 4.8
+      },
+      "location": {
+        "name": "Profile Nooteboom",
+        "street": "Zwaluwlaan 84",
+        "houseNumber": "",
+        "postalCode": "3121XX",
+        "city": "Schiedam",
+        "country": "NL",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "UnAuthorized"
+      }
+    }
+  }
+]

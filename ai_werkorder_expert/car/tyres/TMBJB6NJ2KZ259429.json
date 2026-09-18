@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBJB6NJ2KZ259429",
+      "type": "allseason",
+      "profileDepthMm": {
+        "frontLeft": 4.1,
+        "frontRight": 5.3,
+        "rearLeft": 5.0,
+        "rearRight": 5.4
+      },
+      "location": {
+        "name": "Wittebrug",
+        "street": "Donau",
+        "houseNumber": "",
+        "postalCode": "2491 BC",
+        "city": "DEN HAAG",
+        "country": "",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "Authorized"
+      }
+    }
+  }
+]

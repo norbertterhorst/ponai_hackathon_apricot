@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBJP6NJ6MZ248691",
+      "type": "winter",
+      "profileDepthMm": {
+        "frontLeft": 6.3,
+        "frontRight": 6.6,
+        "rearLeft": 4.3,
+        "rearRight": 5.5
+      },
+      "location": {
+        "name": "Auto Poppe Bevelanden B.V.",
+        "street": "Handelspoort 4",
+        "houseNumber": "",
+        "postalCode": "4538 BN",
+        "city": "TERNEUZEN",
+        "country": "Nederland",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "Authorized"
+      }
+    }
+  }
+]
