@@ -64,3 +64,4 @@ instance/
 # DuckDB temp files
 *.duckdb.wal
 *.duckdb.tmp
+backend/hackathon.duckdb
