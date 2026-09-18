@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBJB7NY0NF937950",
+      "type": "winter",
+      "profileDepthMm": {
+        "frontLeft": 6.1,
+        "frontRight": 6.4,
+        "rearLeft": 5.4,
+        "rearRight": 5.0
+      },
+      "location": {
+        "name": "Autobedrijf Van Mossel 2",
+        "street": "Van Andelstraat",
+        "houseNumber": "",
+        "postalCode": "5141 PB",
+        "city": "WAALWIJK",
+        "country": "",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "Authorized"
+      }
+    }
+  }
+]

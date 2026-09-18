@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBJH9NY7SF233008",
+      "type": "summer",
+      "profileDepthMm": {
+        "frontLeft": 6.8,
+        "frontRight": 5.4,
+        "rearLeft": 5.6,
+        "rearRight": 7.0
+      },
+      "location": {
+        "name": "Century Autogroep",
+        "street": "Bornholmstraat 29",
+        "houseNumber": "",
+        "postalCode": "9723 AW",
+        "city": "GRONINGEN",
+        "country": "NLD",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "Authorized"
+      }
+    }
+  }
+]

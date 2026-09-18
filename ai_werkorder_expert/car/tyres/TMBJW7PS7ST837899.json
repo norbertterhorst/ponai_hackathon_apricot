@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBJW7PS7ST837899",
+      "type": "summer",
+      "profileDepthMm": {
+        "frontLeft": 5.0,
+        "frontRight": 5.8,
+        "rearLeft": 6.2,
+        "rearRight": 6.6
+      },
+      "location": {
+        "name": "Auto Garage Aalsmeer",
+        "street": "Aalsmeerderweg",
+        "houseNumber": "",
+        "postalCode": "1432CJ",
+        "city": "Aalsmeer",
+        "country": "",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "UnAuthorized"
+      }
+    }
+  }
+]

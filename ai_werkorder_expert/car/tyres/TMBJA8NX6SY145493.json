@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBJA8NX6SY145493",
+      "type": "summer",
+      "profileDepthMm": {
+        "frontLeft": 4.9,
+        "frontRight": 5.8,
+        "rearLeft": 4.3,
+        "rearRight": 4.2
+      },
+      "location": {
+        "name": "Pouw Zwolle",
+        "street": "Lippestraat",
+        "houseNumber": "",
+        "postalCode": "8028 PS",
+        "city": "ZWOLLE",
+        "country": "",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "Authorized"
+      }
+    }
+  }
+]

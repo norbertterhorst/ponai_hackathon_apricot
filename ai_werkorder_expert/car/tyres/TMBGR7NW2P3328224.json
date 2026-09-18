@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBGR7NW2P3328224",
+      "type": "winter",
+      "profileDepthMm": {
+        "frontLeft": 6.0,
+        "frontRight": 4.8,
+        "rearLeft": 5.6,
+        "rearRight": 6.5
+      },
+      "location": {
+        "name": "Bosch Car Service Autoborg",
+        "street": "Gotenburgweg 58",
+        "houseNumber": "",
+        "postalCode": "9723 TM",
+        "city": "Groningen",
+        "country": "",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "UnAuthorized"
+      }
+    }
+  }
+]

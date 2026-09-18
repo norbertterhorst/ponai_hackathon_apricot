@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBAP0NX0PY178297",
+      "type": "allseason",
+      "profileDepthMm": {
+        "frontLeft": 4.1,
+        "frontRight": 6.0,
+        "rearLeft": 5.5,
+        "rearRight": 4.9
+      },
+      "location": {
+        "name": "Van Tilburg-Bastianen B.V.",
+        "street": "Konijnenberg 1",
+        "houseNumber": "",
+        "postalCode": "4825 AC",
+        "city": "BREDA",
+        "country": "Nederland",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "Authorized"
+      }
+    }
+  }
+]

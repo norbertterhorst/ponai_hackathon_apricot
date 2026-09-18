@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBNH7NYXTF274668",
+      "type": "summer",
+      "profileDepthMm": {
+        "frontLeft": 4.5,
+        "frontRight": 5.4,
+        "rearLeft": 4.5,
+        "rearRight": 5.0
+      },
+      "location": {
+        "name": "A-Point B.V.",
+        "street": "Kabelweg 100",
+        "houseNumber": "",
+        "postalCode": "1014 BC",
+        "city": "AMSTERDAM",
+        "country": "Nederland",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "Authorized"
+      }
+    }
+  }
+]

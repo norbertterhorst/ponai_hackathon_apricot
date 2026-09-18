@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBNC7NY6TF119956",
+      "type": "allseason",
+      "profileDepthMm": {
+        "frontLeft": 5.7,
+        "frontRight": 4.8,
+        "rearLeft": 4.2,
+        "rearRight": 5.8
+      },
+      "location": {
+        "name": "Auto Hoogenboom",
+        "street": "Zuiderparkweg 612",
+        "houseNumber": "",
+        "postalCode": "3084 CD",
+        "city": "ROTTERDAM",
+        "country": "Nederland",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "Authorized"
+      }
+    }
+  }
+]

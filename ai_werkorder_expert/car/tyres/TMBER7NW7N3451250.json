@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBER7NW7N3451250",
+      "type": "winter",
+      "profileDepthMm": {
+        "frontLeft": 4.7,
+        "frontRight": 5.6,
+        "rearLeft": 4.7,
+        "rearRight": 4.7
+      },
+      "location": {
+        "name": "Pouw Zwolle",
+        "street": "Lippestraat",
+        "houseNumber": "",
+        "postalCode": "8028 PS",
+        "city": "ZWOLLE",
+        "country": "",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "Authorized"
+      }
+    }
+  }
+]

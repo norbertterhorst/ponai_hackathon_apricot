@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBJW7PS7ST946466",
+      "type": "winter",
+      "profileDepthMm": {
+        "frontLeft": 6.9,
+        "frontRight": 5.1,
+        "rearLeft": 4.9,
+        "rearRight": 4.0
+      },
+      "location": {
+        "name": "Bosch Car Service Aal-Storteboom",
+        "street": "Nijverheidslaan 2",
+        "houseNumber": "",
+        "postalCode": "6951KN",
+        "city": "DIEREN",
+        "country": "",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "UnAuthorized"
+      }
+    }
+  }
+]
