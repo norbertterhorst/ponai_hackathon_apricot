@@ -197,7 +197,7 @@ def get_openapi_spec():
             "description": "Vehicle diagnostic API for service workorder management"
         },
         "servers": [
-            {"url": "https://native-doll-year-replica.trycloudflare.com", "description": "Production (Cloudflare Tunnel)"},
+            {"url": "https://gardens-soldier-orlando-decrease.trycloudflare.com", "description": "Production (Cloudflare Tunnel)"},
             {"url": "http://localhost:5003", "description": "Development"}
         ],
         "paths": {
