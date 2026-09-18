@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBJW7PS2ST138736",
+      "type": "allseason",
+      "profileDepthMm": {
+        "frontLeft": 6.8,
+        "frontRight": 6.5,
+        "rearLeft": 5.1,
+        "rearRight": 5.6
+      },
+      "location": {
+        "name": "A-Point B.V.",
+        "street": "Kabelweg 100",
+        "houseNumber": "",
+        "postalCode": "1014 BC",
+        "city": "AMSTERDAM",
+        "country": "Nederland",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "Authorized"
+      }
+    }
+  }
+]

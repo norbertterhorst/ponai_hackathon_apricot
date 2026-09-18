@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBZZZAAZFD143346",
+      "type": "summer",
+      "profileDepthMm": {
+        "frontLeft": 4.9,
+        "frontRight": 6.2,
+        "rearLeft": 7.0,
+        "rearRight": 5.2
+      },
+      "location": {
+        "name": "Huiskes-Kokkeler B.V.",
+        "street": "Goudstraat",
+        "houseNumber": "",
+        "postalCode": "7554 NG",
+        "city": "HENGELO",
+        "country": "NLD",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "Authorized"
+      }
+    }
+  }
+]

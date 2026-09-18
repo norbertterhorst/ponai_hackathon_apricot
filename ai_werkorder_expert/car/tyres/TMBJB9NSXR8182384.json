@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBJB9NSXR8182384",
+      "type": "summer",
+      "profileDepthMm": {
+        "frontLeft": 6.3,
+        "frontRight": 4.8,
+        "rearLeft": 6.6,
+        "rearRight": 6.0
+      },
+      "location": {
+        "name": "bosch car service van der velden",
+        "street": "weteringweg 17",
+        "houseNumber": "",
+        "postalCode": "2641KM",
+        "city": "pijnacker",
+        "country": "NL",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "UnAuthorized"
+      }
+    }
+  }
+]

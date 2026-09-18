@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBAP9NE4J0948990",
+      "type": "winter",
+      "profileDepthMm": {
+        "frontLeft": 5.9,
+        "frontRight": 6.9,
+        "rearLeft": 6.2,
+        "rearRight": 4.6
+      },
+      "location": {
+        "name": "Maas-De Koning B.V.",
+        "street": "Wormerhoek 5-7",
+        "houseNumber": "",
+        "postalCode": "2905 TX",
+        "city": "CAPELLE A/D IJSSEL",
+        "country": "Nederland",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "Unknown"
+      }
+    }
+  }
+]

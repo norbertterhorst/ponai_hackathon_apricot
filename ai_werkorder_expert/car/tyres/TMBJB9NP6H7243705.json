@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBJB9NP6H7243705",
+      "type": "winter",
+      "profileDepthMm": {
+        "frontLeft": 4.9,
+        "frontRight": 5.6,
+        "rearLeft": 6.9,
+        "rearRight": 4.1
+      },
+      "location": {
+        "name": "Van Mossel Waalwijk",
+        "street": "Van Andelstraat 1",
+        "houseNumber": "",
+        "postalCode": "5141 PB",
+        "city": "WAALWIJK",
+        "country": "",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "Authorized"
+      }
+    }
+  }
+]

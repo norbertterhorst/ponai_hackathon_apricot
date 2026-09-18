@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBJB9NS8L8850086",
+      "type": "allseason",
+      "profileDepthMm": {
+        "frontLeft": 4.2,
+        "frontRight": 4.2,
+        "rearLeft": 4.1,
+        "rearRight": 4.6
+      },
+      "location": {
+        "name": "Auto Hoogenboom B.V.",
+        "street": "Hoogstad 401",
+        "houseNumber": "",
+        "postalCode": "3131 KX",
+        "city": "VLAARDINGEN",
+        "country": "Nederland",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "Authorized"
+      }
+    }
+  }
+]

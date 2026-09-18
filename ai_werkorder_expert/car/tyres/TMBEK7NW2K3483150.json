@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBEK7NW2K3483150",
+      "type": "summer",
+      "profileDepthMm": {
+        "frontLeft": 4.5,
+        "frontRight": 5.4,
+        "rearLeft": 4.9,
+        "rearRight": 5.7
+      },
+      "location": {
+        "name": "Maas-De Koning",
+        "street": "Vlambloem 40-48",
+        "houseNumber": "",
+        "postalCode": "3068 JE",
+        "city": "ROTTERDAM",
+        "country": "",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "Unknown"
+      }
+    }
+  }
+]

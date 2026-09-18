@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBJP8NX7RY737444",
+      "type": "summer",
+      "profileDepthMm": {
+        "frontLeft": 4.8,
+        "frontRight": 5.8,
+        "rearLeft": 5.3,
+        "rearRight": 4.1
+      },
+      "location": {
+        "name": "Broekhuis Zwaag",
+        "street": "De Marowijne 53",
+        "houseNumber": "",
+        "postalCode": "1689 AR",
+        "city": "ZWAAG",
+        "country": "",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "Authorized"
+      }
+    }
+  }
+]

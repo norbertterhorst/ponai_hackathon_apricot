@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBJW7NP8L7206986",
+      "type": "allseason",
+      "profileDepthMm": {
+        "frontLeft": 5.3,
+        "frontRight": 6.2,
+        "rearLeft": 6.2,
+        "rearRight": 5.6
+      },
+      "location": {
+        "name": "Pon Center B.V.",
+        "street": "Landzigt 8",
+        "houseNumber": "",
+        "postalCode": "3454 PE",
+        "city": "DE MEERN",
+        "country": "Nederland",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "Authorized"
+      }
+    }
+  }
+]

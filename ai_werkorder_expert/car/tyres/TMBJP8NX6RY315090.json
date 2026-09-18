@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBJP8NX6RY315090",
+      "type": "summer",
+      "profileDepthMm": {
+        "frontLeft": 6.6,
+        "frontRight": 6.8,
+        "rearLeft": 6.9,
+        "rearRight": 6.8
+      },
+      "location": {
+        "name": "Autobedrijf Thoonen B.V.",
+        "street": "Nieuweweg 15",
+        "houseNumber": "",
+        "postalCode": "5438 AB",
+        "city": "GASSEL",
+        "country": "",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "Authorized"
+      }
+    }
+  }
+]

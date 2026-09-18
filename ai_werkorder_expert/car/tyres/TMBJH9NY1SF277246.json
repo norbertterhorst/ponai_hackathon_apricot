@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBJH9NY1SF277246",
+      "type": "allseason",
+      "profileDepthMm": {
+        "frontLeft": 5.1,
+        "frontRight": 5.8,
+        "rearLeft": 6.7,
+        "rearRight": 4.9
+      },
+      "location": {
+        "name": "Wealer",
+        "street": "Bergerweg 67",
+        "houseNumber": "",
+        "postalCode": "6135 KD",
+        "city": "SITTARD",
+        "country": "",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "Authorized"
+      }
+    }
+  }
+]

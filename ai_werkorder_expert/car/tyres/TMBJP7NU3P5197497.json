@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBJP7NU3P5197497",
+      "type": "allseason",
+      "profileDepthMm": {
+        "frontLeft": 5.0,
+        "frontRight": 6.7,
+        "rearLeft": 4.6,
+        "rearRight": 4.7
+      },
+      "location": {
+        "name": "Goritzlehner",
+        "street": "Diamantstraat 30",
+        "houseNumber": "",
+        "postalCode": "7554TA",
+        "city": "Hengelo",
+        "country": "",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "UnAuthorized"
+      }
+    }
+  }
+]
