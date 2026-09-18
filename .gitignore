@@ -65,3 +65,5 @@ instance/
 *.duckdb.wal
 *.duckdb.tmp
 backend/hackathon.duckdb
+!ai_werkorder_expert/car/tyres/
+!ai_werkorder_expert/dealers/
