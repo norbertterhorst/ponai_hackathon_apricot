@@ -136,7 +136,7 @@ def get_openapi_spec():
             "description": "Vehicle diagnostic API for service workorder management"
         },
         "servers": [
-            {"url": "https://checkout-doing-series-background.trycloudflare.com", "description": "Production (Cloudflare Tunnel)"},
+            {"url": "https://gardens-soldier-orlando-decrease.trycloudflare.com", "description": "Production (Cloudflare Tunnel)"},
             {"url": "http://localhost:5000", "description": "Development"}
         ],
         "paths": {
@@ -278,6 +278,17 @@ def get_openapi_spec():
                         {"name": "plate", "in": "query", "required": True, "schema": {"type": "string"}, "example": "WDX-90-M"}
                     ],
                     "responses": {"200": {"description": "Vehicle data"}}
+                }
+            },
+            "/api/customer/by-plate": {
+                "get": {
+                    "summary": "Get customer ID by license plate",
+                    "description": "Resolve a license plate to the related customer ID(s) using vehicle ownership data",
+                    "tags": ["Customer"],
+                    "parameters": [
+                        {"name": "plate", "in": "query", "required": True, "schema": {"type": "string"}, "example": "XTR-86-Z"}
+                    ],
+                    "responses": {"200": {"description": "Customer relation data"}}
                 }
             },
             "/api/vehicle/by-vin": {
@@ -475,6 +486,54 @@ def get_vehicle_by_plate():
         
         return jsonify(response), 200
     
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+@app.route('/api/customer/by-plate', methods=['GET'])
+def get_customer_id_by_plate():
+    """
+    Get customer ID(s) by license plate
+    Example: /api/customer/by-plate?plate=XTR-86-Z
+    """
+    plate = request.args.get('plate', '')
+    plate_key = plate.replace('-', '').upper()
+
+    if not plate_key:
+        return jsonify({"error": "Plate parameter required"}), 400
+
+    try:
+        result = con.execute("""
+        SELECT
+            v.license_plate,
+            v.vin,
+            fvo.relationship_type,
+            fvo.customer_id,
+            c.given_name,
+            c.family_name
+        FROM dim_vehicles v
+        JOIN fact_vehicle_ownership fvo ON v.vin = fvo.vehicle_vin
+        LEFT JOIN dim_customers c ON fvo.customer_id = c.customer_id
+        WHERE upper(replace(v.license_plate, '-', '')) = ?
+        ORDER BY fvo.relationship_type, fvo.customer_id
+        """, [plate_key]).fetchall()
+
+        if not result:
+            return jsonify({"error": "Customer relation not found for license plate"}), 404
+
+        response = {
+            "license_plate": result[0][0],
+            "vin": result[0][1],
+            "customers": [
+                {
+                    "relation_type": row[2],
+                    "customer_id": row[3],
+                    "name": f"{row[4] or ''} {row[5] or ''}".strip()
+                } for row in result
+            ]
+        }
+
+        return jsonify(response), 200
+
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
