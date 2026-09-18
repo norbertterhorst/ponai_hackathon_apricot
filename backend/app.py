@@ -32,6 +32,67 @@ def row_to_dict(row):
         return None
     return dict(row) if hasattr(row, 'keys') else row
 
+def is_vehicle_leased(vin):
+    """
+    Check if vehicle is leased by reading ROB-net/leaseContract/{vin}.json
+    Returns: True if leased, False if owned/not found
+    """
+    import json
+    lease_file = Path(__file__).parent.parent / "ai_werkorder_expert" / "ROB-net" / "leaseContract" / f"{vin}.json"
+    
+    try:
+        if lease_file.exists():
+            with open(lease_file) as f:
+                data = json.load(f)
+                if data and len(data) > 0:
+                    lease_contract = data[0].get("leaseContract")
+                    return lease_contract is not None  # If leaseContract exists and is not null, vehicle is leased
+    except:
+        pass
+    
+    return False  # Default to not leased
+
+def get_price_from_package(package, is_leased):
+    """
+    Extract the correct price from a package based on lease status.
+    Looks for matching entry in prices array with lease=true/false.
+    Falls back to price_incl/price_excl if prices array not available.
+    """
+    if not package:
+        return None, None
+    
+    # If package has prices array with lease variants, find the correct one
+    prices_array = package.get("prices", [])
+    if prices_array and isinstance(prices_array, list):
+        for price_entry in prices_array:
+            if isinstance(price_entry, dict) and price_entry.get("lease") == is_leased:
+                return price_entry.get("priceExclusive"), price_entry.get("priceInclusive")
+    
+    # Fallback: use price_incl/price_excl fields (they default to lease=false)
+    return package.get("price_excl"), package.get("price_incl")
+
+def apply_lease_pricing_to_package(package, is_leased):
+    """
+    Update package's price_excl and price_incl fields based on lease status.
+    Returns a modified copy of the package with correct pricing.
+    """
+    if not package:
+        return None
+    
+    # Make a shallow copy to avoid modifying the original
+    pkg_copy = package.copy()
+    
+    # Get the correct prices for this lease status
+    price_excl, price_incl = get_price_from_package(package, is_leased)
+    
+    # Update the top-level price fields
+    if price_excl is not None:
+        pkg_copy["price_excl"] = price_excl
+    if price_incl is not None:
+        pkg_copy["price_incl"] = price_incl
+    
+    return pkg_copy
+
 def days_until_date(date_str):
     """Calculate days until a date"""
     if not date_str:
@@ -136,8 +197,8 @@ def get_openapi_spec():
             "description": "Vehicle diagnostic API for service workorder management"
         },
         "servers": [
-            {"url": "https://gardens-soldier-orlando-decrease.trycloudflare.com", "description": "Production (Cloudflare Tunnel)"},
-            {"url": "http://localhost:5000", "description": "Development"}
+            {"url": "https://native-doll-year-replica.trycloudflare.com", "description": "Production (Cloudflare Tunnel)"},
+            {"url": "http://localhost:5003", "description": "Development"}
         ],
         "paths": {
             "/api/vehicle/diagnostic/{plate}": {
@@ -165,6 +226,7 @@ def get_openapi_spec():
                                                     "model": {"type": "string", "example": "Polo (6) GP"},
                                                     "mileage_km": {"type": "number", "example": 75500},
                                                     "fuel_type": {"type": "string"},
+                                                    "is_leased": {"type": "boolean", "description": "True if vehicle has active lease contract"},
                                                     "warranty_valid": {"type": "boolean"},
                                                     "apk_renew_days": {"type": "integer"}
                                                 }
@@ -196,15 +258,64 @@ def get_openapi_spec():
                                                         "type": {"type": "string", "example": "Inspectie"},
                                                         "urgency": {"type": "string", "enum": ["HIGH", "MEDIUM", "LOW"]},
                                                         "details": {"type": "object"},
-                                                        "duration_hours": {"type": "number"},
-                                                        "estimated_cost": {"type": "number"}
+                                                        "duration_hours": {"type": "number", "example": 1.0},
+                                                        "estimated_cost": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "price_excl": {"type": "number", "example": 150.0},
+                                                                "price_incl": {"type": "number", "example": 181.5}
+                                                            }
+                                                        },
+                                                        "package": {
+                                                            "type": "object",
+                                                            "description": "Complete PON package object with pricing and details",
+                                                            "properties": {
+                                                                "code": {"type": "string"},
+                                                                "name": {"type": "string"},
+                                                                "description": {"type": "string"},
+                                                                "category": {"type": "string"},
+                                                                "category_code": {"type": "string"},
+                                                                "duration_hours": {"type": "number"},
+                                                                "duration_category": {"type": "string"},
+                                                                "price_excl": {"type": "number"},
+                                                                "price_incl": {"type": "number"},
+                                                                "type": {"type": "string", "example": "PON"},
+                                                                "is_owner_task": {"type": "boolean"},
+                                                                "contents": {
+                                                                    "type": "array",
+                                                                    "items": {
+                                                                        "type": "object",
+                                                                        "properties": {
+                                                                            "amount": {"type": "number"},
+                                                                            "code": {"type": "string"},
+                                                                            "description": {"type": "string"},
+                                                                            "type": {"type": "string", "example": "ppsPart"}
+                                                                        }
+                                                                    }
+                                                                },
+                                                                "prices": {
+                                                                    "type": "array",
+                                                                    "items": {
+                                                                        "type": "object",
+                                                                        "properties": {
+                                                                            "startDate": {"type": "string", "format": "date-time"},
+                                                                            "endDate": {"type": "string", "format": "date-time"},
+                                                                            "lease": {"type": "boolean"},
+                                                                            "priceExclusive": {"type": "number"},
+                                                                            "priceInclusive": {"type": "number"}
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
                                                     }
                                                 }
                                             },
                                             "required_maintenance_summary": {
                                                 "type": "object",
                                                 "properties": {
-                                                    "total_cost": {"type": "number", "example": 200},
+                                                    "total_cost_excl": {"type": "number", "example": 406.61},
+                                                    "total_cost_incl": {"type": "number", "example": 492.0},
                                                     "total_duration_hours": {"type": "number", "example": 1.5},
                                                     "count": {"type": "integer", "example": 2}
                                                 }
@@ -707,6 +818,9 @@ def get_vehicle_diagnostic(plate):
         
         vin = vehicle_result[0]
         
+        # Detect if vehicle is leased
+        is_leased = is_vehicle_leased(vin)
+        
         # Get last service
         service_result = con.execute(f"""
         SELECT service_date, mileage_km, work_description, dealer_name
@@ -813,6 +927,9 @@ def get_vehicle_diagnostic(plate):
         if apk_days is not None and apk_days <= 30:
             # Find matching APK package
             apk_pkg = find_package_for_maintenance("APK", pon_packages)
+            # Apply correct pricing based on lease status
+            if apk_pkg:
+                apk_pkg = apply_lease_pricing_to_package(apk_pkg, is_leased)
             
             maintenance_needed.append({
                 "type": "APK",
@@ -846,6 +963,9 @@ def get_vehicle_diagnostic(plate):
                 
                 # Find matching package for this maintenance type
                 maint_pkg = find_package_for_maintenance(desc, pon_packages)
+                # Apply correct pricing based on lease status
+                if maint_pkg:
+                    maint_pkg = apply_lease_pricing_to_package(maint_pkg, is_leased)
                 
                 maintenance_needed.append({
                     "type": desc,
@@ -867,6 +987,7 @@ def get_vehicle_diagnostic(plate):
                 "model": vehicle_result[3],
                 "mileage_km": current_mileage,
                 "fuel_type": vehicle_result[5],
+                "is_leased": is_leased,
                 "warranty": {
                     "end_date": warranty_end,
                     "days_remaining": warranty_days,
