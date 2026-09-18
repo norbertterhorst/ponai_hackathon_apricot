@@ -6,6 +6,7 @@ Query voertuigen op kenteken, VIN, of klant ID
 from flask import Flask, jsonify, request, render_template
 from flask_cors import CORS
 import duckdb
+import json
 from pathlib import Path
 from datetime import datetime
 
@@ -51,6 +52,21 @@ def is_vehicle_leased(vin):
         pass
     
     return False  # Default to not leased
+
+def get_tyre_info(vin):
+    """Read tyre information from car/tyres/{vin}.json if available"""
+    tyre_file = Path(__file__).parent.parent / "ai_werkorder_expert" / "car" / "tyres" / f"{vin}.json"
+
+    try:
+        if tyre_file.exists():
+            with open(tyre_file) as f:
+                data = json.load(f)
+                if data and len(data) > 0:
+                    return data[0].get("tyres")
+    except:
+        pass
+
+    return None
 
 def get_price_from_package(package, is_leased):
     """
@@ -197,7 +213,7 @@ def get_openapi_spec():
             "description": "Vehicle diagnostic API for service workorder management"
         },
         "servers": [
-            {"url": "https://gardens-soldier-orlando-decrease.trycloudflare.com", "description": "Production (Cloudflare Tunnel)"},
+            {"url": "https://christina-temperature-meant-blank.trycloudflare.com", "description": "Production (Cloudflare Tunnel)"},
             {"url": "http://localhost:5003", "description": "Development"}
         ],
         "paths": {
@@ -227,6 +243,16 @@ def get_openapi_spec():
                                                     "mileage_km": {"type": "number", "example": 75500},
                                                     "fuel_type": {"type": "string"},
                                                     "is_leased": {"type": "boolean", "description": "True if vehicle has active lease contract"},
+                                                    "tyres": {
+                                                        "type": "object",
+                                                        "nullable": True,
+                                                        "properties": {
+                                                            "vin": {"type": "string"},
+                                                            "type": {"type": "string", "example": "winter"},
+                                                            "profileDepthMm": {"type": "number"},
+                                                            "location": {"type": "string"}
+                                                        }
+                                                    },
                                                     "warranty_valid": {"type": "boolean"},
                                                     "apk_renew_days": {"type": "integer"}
                                                 }
@@ -388,7 +414,7 @@ def get_openapi_spec():
                     "parameters": [
                         {"name": "plate", "in": "query", "required": True, "schema": {"type": "string"}, "example": "WDX-90-M"}
                     ],
-                    "responses": {"200": {"description": "Vehicle data"}}
+                    "responses": {"200": {"description": "Vehicle data including tyre information"}}
                 }
             },
             "/api/customer/by-plate": {
@@ -409,7 +435,7 @@ def get_openapi_spec():
                     "parameters": [
                         {"name": "vin", "in": "query", "required": True, "schema": {"type": "string"}}
                     ],
-                    "responses": {"200": {"description": "Vehicle data"}}
+                    "responses": {"200": {"description": "Vehicle data including tyre information"}}
                 }
             },
             "/api/customer/{customer_id}/info": {
@@ -429,7 +455,7 @@ def get_openapi_spec():
                     "parameters": [
                         {"name": "customer_id", "in": "path", "required": True, "schema": {"type": "string"}}
                     ],
-                    "responses": {"200": {"description": "List of vehicles"}}
+                    "responses": {"200": {"description": "List of vehicles including tyre information"}}
                 }
             },
             "/api/health": {
@@ -567,7 +593,8 @@ def get_vehicle_by_plate():
                 "warranty_days_remaining": days_until_date(row[6]),
                 "warranty_valid": is_warranty_valid(row[6]),
                 "apk_renew_date": row[7],
-                "first_assigned_date": row[8]
+                "first_assigned_date": row[8],
+                "tyres": get_tyre_info(vin)
             },
             "owner": {
                 "customer_id": row[9],
@@ -688,7 +715,8 @@ def get_vehicle_by_vin():
             "mileage": row[4],
             "fuel_type": row[5],
             "warranty_end_date": row[6],
-            "apk_renew_date": row[7]
+            "apk_renew_date": row[7],
+            "tyres": get_tyre_info(row[0])
         }
         
         return jsonify(response), 200
@@ -724,7 +752,8 @@ def get_customer_vehicles(customer_id):
                 "license_plate": r[1],
                 "brand": r[2],
                 "model": r[3],
-                "mileage": r[4]
+                "mileage": r[4],
+                "tyres": get_tyre_info(r[0])
             } for r in result
         ]
         
@@ -988,6 +1017,7 @@ def get_vehicle_diagnostic(plate):
                 "mileage_km": current_mileage,
                 "fuel_type": vehicle_result[5],
                 "is_leased": is_leased,
+                "tyres": get_tyre_info(vin),
                 "warranty": {
                     "end_date": warranty_end,
                     "days_remaining": warranty_days,
