@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBNC7NY3SF541249",
+      "type": "allseason",
+      "profileDepthMm": {
+        "frontLeft": 6.9,
+        "frontRight": 6.3,
+        "rearLeft": 5.7,
+        "rearRight": 5.1
+      },
+      "location": {
+        "name": "Wittebrug B.V.",
+        "street": "Leehove 49",
+        "houseNumber": "",
+        "postalCode": "2678 MA",
+        "city": "DE LIER",
+        "country": "Nederland",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "Authorized"
+      }
+    }
+  }
+]

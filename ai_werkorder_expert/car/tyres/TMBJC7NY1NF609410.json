@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBJC7NY1NF609410",
+      "type": "summer",
+      "profileDepthMm": {
+        "frontLeft": 6.6,
+        "frontRight": 6.4,
+        "rearLeft": 4.0,
+        "rearRight": 5.0
+      },
+      "location": {
+        "name": "Autobedrijf Tromp",
+        "street": "De Vaart 3",
+        "houseNumber": "",
+        "postalCode": "7784dj",
+        "city": "Ane",
+        "country": "",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "UnAuthorized"
+      }
+    }
+  }
+]

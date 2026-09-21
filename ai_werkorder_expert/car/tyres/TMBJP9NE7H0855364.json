@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBJP9NE7H0855364",
+      "type": "winter",
+      "profileDepthMm": {
+        "frontLeft": 5.4,
+        "frontRight": 5.6,
+        "rearLeft": 5.5,
+        "rearRight": 5.4
+      },
+      "location": {
+        "name": "Ames Autobedrijf  B.V.",
+        "street": "Laan der Verenigde Naties 75",
+        "houseNumber": "",
+        "postalCode": "3316 AK",
+        "city": "DORDRECHT",
+        "country": "Nederland",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "Authorized"
+      }
+    }
+  }
+]

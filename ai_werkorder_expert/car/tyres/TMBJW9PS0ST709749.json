@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBJW9PS0ST709749",
+      "type": "summer",
+      "profileDepthMm": {
+        "frontLeft": 5.8,
+        "frontRight": 5.3,
+        "rearLeft": 5.5,
+        "rearRight": 5.3
+      },
+      "location": {
+        "name": "AutoFirst Van Gastel Auto Service",
+        "street": "Half Elfje 18",
+        "houseNumber": "",
+        "postalCode": "5711ES",
+        "city": "Someren",
+        "country": "NL",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "UnAuthorized"
+      }
+    }
+  }
+]

@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBJB7PSXST321020",
+      "type": "winter",
+      "profileDepthMm": {
+        "frontLeft": 5.0,
+        "frontRight": 6.8,
+        "rearLeft": 7.0,
+        "rearRight": 6.6
+      },
+      "location": {
+        "name": "Autobedrijfbaarse Aalsmeer",
+        "street": "Oosteinderweg 222",
+        "houseNumber": "",
+        "postalCode": "1432 ba",
+        "city": "Aalsmeer",
+        "country": "",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "UnAuthorized"
+      }
+    }
+  }
+]

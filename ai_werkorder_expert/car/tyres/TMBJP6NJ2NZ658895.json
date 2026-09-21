@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBJP6NJ2NZ658895",
+      "type": "allseason",
+      "profileDepthMm": {
+        "frontLeft": 5.2,
+        "frontRight": 5.1,
+        "rearLeft": 5.2,
+        "rearRight": 5.7
+      },
+      "location": {
+        "name": "Autobedrijfbaarse Aalsmeer",
+        "street": "Oosteinderweg 222",
+        "houseNumber": "",
+        "postalCode": "1432 ba",
+        "city": "Aalsmeer",
+        "country": "",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "UnAuthorized"
+      }
+    }
+  }
+]

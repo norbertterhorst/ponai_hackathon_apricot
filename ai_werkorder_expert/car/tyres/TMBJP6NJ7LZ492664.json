@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBJP6NJ7LZ492664",
+      "type": "allseason",
+      "profileDepthMm": {
+        "frontLeft": 5.1,
+        "frontRight": 4.0,
+        "rearLeft": 5.4,
+        "rearRight": 4.3
+      },
+      "location": {
+        "name": "Pouw Dealer B.V.",
+        "street": "Setheweg 6",
+        "houseNumber": "",
+        "postalCode": "7942 LB",
+        "city": "MEPPEL",
+        "country": "Nederland",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "Authorized"
+      }
+    }
+  }
+]

@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBGR6NWXR3218307",
+      "type": "allseason",
+      "profileDepthMm": {
+        "frontLeft": 5.7,
+        "frontRight": 4.6,
+        "rearLeft": 4.2,
+        "rearRight": 4.9
+      },
+      "location": {
+        "name": "Autobedrijf 't Centrum",
+        "street": "C. Branderhorststraat 21",
+        "houseNumber": "",
+        "postalCode": "4266 EK",
+        "city": "Eethen",
+        "country": "NL",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "UnAuthorized"
+      }
+    }
+  }
+]

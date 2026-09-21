@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBJB9NP6H7783750",
+      "type": "summer",
+      "profileDepthMm": {
+        "frontLeft": 5.6,
+        "frontRight": 4.4,
+        "rearLeft": 5.4,
+        "rearRight": 6.4
+      },
+      "location": {
+        "name": "Audi Centrum Rotterdam",
+        "street": "Zuiderparkweg 620",
+        "houseNumber": "",
+        "postalCode": "3084 CD",
+        "city": "ROTTERDAM",
+        "country": "Nederland",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "Authorized"
+      }
+    }
+  }
+]

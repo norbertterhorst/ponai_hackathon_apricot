@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBJC7NY0PF772028",
+      "type": "summer",
+      "profileDepthMm": {
+        "frontLeft": 6.1,
+        "frontRight": 6.0,
+        "rearLeft": 4.2,
+        "rearRight": 7.0
+      },
+      "location": {
+        "name": "Pouw Harderwijk",
+        "street": "Zuiderbreedte 46",
+        "houseNumber": "",
+        "postalCode": "3845 MC",
+        "city": "HARDERWIJK",
+        "country": "",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "Authorized"
+      }
+    }
+  }
+]

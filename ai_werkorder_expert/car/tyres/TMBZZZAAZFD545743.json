@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBZZZAAZFD545743",
+      "type": "winter",
+      "profileDepthMm": {
+        "frontLeft": 6.1,
+        "frontRight": 4.1,
+        "rearLeft": 5.4,
+        "rearRight": 4.3
+      },
+      "location": {
+        "name": "Autobedrijf Martens",
+        "street": "Riegshoogtendijk 150",
+        "houseNumber": "",
+        "postalCode": "7913 TC",
+        "city": "Hollandscheveld",
+        "country": "",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "UnAuthorized"
+      }
+    }
+  }
+]

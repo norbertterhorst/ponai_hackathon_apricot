@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBJC7NY1NF676402",
+      "type": "allseason",
+      "profileDepthMm": {
+        "frontLeft": 4.2,
+        "frontRight": 5.2,
+        "rearLeft": 6.6,
+        "rearRight": 6.0
+      },
+      "location": {
+        "name": "Ames Autobedrijf",
+        "street": "Langeweg 350",
+        "houseNumber": "",
+        "postalCode": "3331 LG",
+        "city": "ZWIJNDRECHT",
+        "country": "NLD",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "Authorized"
+      }
+    }
+  }
+]

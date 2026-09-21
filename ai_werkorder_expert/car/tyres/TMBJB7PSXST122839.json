@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBJB7PSXST122839",
+      "type": "winter",
+      "profileDepthMm": {
+        "frontLeft": 6.3,
+        "frontRight": 5.0,
+        "rearLeft": 6.8,
+        "rearRight": 5.2
+      },
+      "location": {
+        "name": "Audi Centrum Rotterdam",
+        "street": "Zuiderparkweg 620",
+        "houseNumber": "",
+        "postalCode": "3084 CD",
+        "city": "ROTTERDAM",
+        "country": "Nederland",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "Authorized"
+      }
+    }
+  }
+]

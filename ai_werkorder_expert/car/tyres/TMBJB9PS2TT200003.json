@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBJB9PS2TT200003",
+      "type": "winter",
+      "profileDepthMm": {
+        "frontLeft": 4.6,
+        "frontRight": 6.7,
+        "rearLeft": 4.9,
+        "rearRight": 4.4
+      },
+      "location": {
+        "name": "Pouw Apeldoorn",
+        "street": "Ambachtsveld",
+        "houseNumber": "",
+        "postalCode": "7327 AZ",
+        "city": "APELDOORN",
+        "country": "",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "Authorized"
+      }
+    }
+  }
+]

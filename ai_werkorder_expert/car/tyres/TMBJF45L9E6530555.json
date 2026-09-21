@@ -1,0 +1,25 @@
+[
+  {
+    "tyres": {
+      "vin": "TMBJF45L9E6530555",
+      "type": "winter",
+      "profileDepthMm": {
+        "frontLeft": 6.2,
+        "frontRight": 4.3,
+        "rearLeft": 6.8,
+        "rearRight": 4.9
+      },
+      "location": {
+        "name": "Audi Centrum Rotterdam",
+        "street": "Zuiderparkweg 620",
+        "houseNumber": "",
+        "postalCode": "3084 CD",
+        "city": "ROTTERDAM",
+        "country": "Nederland",
+        "state": "",
+        "countryCode": "",
+        "authorizationStatus": "Authorized"
+      }
+    }
+  }
+]
