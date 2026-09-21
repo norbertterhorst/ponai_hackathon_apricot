@@ -1,0 +1,49 @@
+flowchart TB
+    classDef dim fill:#ffab91,stroke:#d84315,stroke-width:2px,color:#4e1a00;
+    classDef fact fill:#90caf9,stroke:#1565c0,stroke-width:2px,color:#0a2f5c;
+    classDef groupBox fill:#f5f5f5,stroke:#bdbdbd,stroke-width:1px,color:#424242;
+
+    DVH["dim_vehicles"]:::dim
+    DC["dim_customers"]:::dim
+    FVO["fact_vehicle_ownership"]:::fact
+
+    DVH --> FVO
+    DC --> FVO
+
+    subgraph ONDERHOUD["Onderhoud"]
+        direction TB
+        DMI["dim_maintenance_intervals"]:::dim
+        FSH["fact_service_history"]:::fact
+        DD["dim_dealers"]:::dim
+        DPP["dim_pon_packages"]:::dim
+
+        DMI --> FSH
+        DD --> FSH
+        DPP -.-> FSH
+    end
+    class ONDERHOUD groupBox
+
+    subgraph RISICO["Risico"]
+        FREC["fact_recalls"]:::fact
+    end
+    class RISICO groupBox
+
+    subgraph UITVOERING["Uitvoering"]
+        direction TB
+        FREP["fact_repairs"]:::fact
+        FRL["fact_repair_labor"]:::fact
+        FREP --> FRL
+    end
+    class UITVOERING groupBox
+
+    subgraph KLANTCONTACT["Contracten & status"]
+        direction TB
+        FC["fact_contracts"]:::fact
+        FVCS["fact_vehicle_current_state"]:::fact
+    end
+    class KLANTCONTACT groupBox
+
+    DVH --> ONDERHOUD
+    DVH --> RISICO
+    DVH --> UITVOERING
+    FVO --> KLANTCONTACT

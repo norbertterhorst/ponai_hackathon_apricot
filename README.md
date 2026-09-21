@@ -13,6 +13,50 @@ Complete vehicle diagnostic API with smart maintenance detection, recalls, and s
 
 ---
 
+## 🤝 Overdracht / Handover
+
+> ⚠️ **Alle data is mockup-data**, gegenereerd voor de hackathon. Er zit geen echte klant- of voertuiginformatie in.
+
+Je hebt de JSON-brondata (`ai_werkorder_expert/`) al. Wat je nodig hebt om verder te gaan:
+
+1. **Pull de laatste versie** (ook de submodule):
+   ```bash
+   git pull
+   git submodule update --init --recursive
+   ```
+2. **Zet de database op** (bouwt `backend/hackathon.duckdb` opnieuw uit de JSONs, veilig om te herhalen):
+   ```bash
+   source venv/bin/activate
+   python backend/setup_duckdb.py
+   ```
+3. **Start de DuckDB inspector** (lokale query-pagina, read-only):
+   ```bash
+   python backend/web_inspect.py
+   # open http://localhost:5555
+   ```
+   Tabblad **🔍 Query** laat je vrij SQL uitvoeren op alle tabellen.
+
+Zie [database-schema.mmd](database-schema.mmd) voor het volledige ER-diagram, en de tabel hieronder voor kolommen per tabel.
+
+### Kolommen per tabel
+
+| Tabel | Kolommen |
+|---|---|
+| `dim_customers` | customer_id (PK), given_name, family_name, address_line1, address_line2, postal_code, city, country_code, status, language_code |
+| `dim_vehicles` | vin (PK), license_plate, brand_name, model_name, model_type, fuel_type, mileage, warranty_end_date, apk_renew_date, first_assigned_date, is_dutch_vehicle |
+| `dim_maintenance_intervals` | interval_id (PK), vehicle_vin, description, interval_months, interval_kilometers |
+| `dim_dealers` | dealer_id (PK), dealer_name, street, postal_code, city, country, authorization_status |
+| `dim_pon_packages` | pon_code (PK), pon_name, pon_description, allowed_time_hours, price_inclusive, price_exclusive, duration_category |
+| `fact_vehicle_ownership` | ownership_id (PK), vehicle_vin, customer_id, relationship_type |
+| `fact_service_history` | service_id (PK), vehicle_vin, service_date, mileage_km, work_description, dealer_name, service_kind, mobility_guarantee |
+| `fact_recalls` | recall_id (PK), vehicle_vin, recall_source, status |
+| `fact_repairs` | repair_id (PK), vehicle_vin, invoice_number, order_number, acceptance_date, mileage_km, warranty, is_maintenance *(momenteel leeg)* |
+| `fact_repair_labor` | labor_id (PK), repair_id, line_number, description, is_maintenance, amount *(momenteel leeg)* |
+| `fact_contracts` | contract_id (PK), vehicle_vin, customer_id, contract_type, start_date, end_date, contract_data *(momenteel leeg)* |
+| `fact_vehicle_current_state` | vehicle_vin (PK), current_customer_id, current_mileage, last_service_date, next_service_date, warranty_status, last_appointment_date, updated_at |
+
+---
+
 ## 🚀 Quick Start (3 steps)
 
 ### 1. Clone & Setup
@@ -301,7 +345,7 @@ python backend/inspect_db.py stats
 python backend/inspect_db.py tables
 python backend/inspect_db.py sample dim_vehicles 5
 
-# Web inspector (port 5556)
+# Web inspector (port 5555)
 python backend/web_inspect.py
 ```
 
